@@ -22,7 +22,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.httpBasic()
                 .and()
-                .authorizeRequests().anyRequest().authenticated()
+                .authorizeRequests()
+
+                .anyRequest().authenticated()
                 .and().build();
     }
     @Bean
